@@ -11,48 +11,67 @@
     <div class="wrapper position">
 
         <div class="left__container">
-            <div class="top__side">
-                <div class="information">
-                    <div class="leftIdent__info">
-                        <input class="inputForm" type="text" name="country" id="country" placeholder="Страна">
-                        <input class="inputForm" type="text" name="organization" id="organization" placeholder="Кем выдан">
-                        <input class="inputForm" type="text" name="date" id="date" placeholder="Дата выдачи">
+            <form action="" method="post">
+                <div class="top__side">
+                    <div class="information">
+                        <div class="leftIdent__info">
+                            <!-- вводить только капсом, форма ввода с выпадающим списком СНГ -->
+                            <input class="inputForm" type="text" name="country" id="country" placeholder="Страна">
+
+                            <!-- автоматически вводить капсом -->
+                            <input class="inputForm" type="text" name="organization" id="organization" placeholder="Кем выдан">
+
+                            <!-- числовое, валидация, автоматическая точка при вводе -->
+                            <input class="inputForm" type="number" name="date" id="date" placeholder="Дата выдачи">
+
+                            <!-- числовое, валидация, автоматический дефис при вводе -->
+                            <input class="inputForm" type="number" name="key" id="key" placeholder="Код подразделения">
+
+                            <!-- числовое, валидация, автоматический пробел при вводе -->
+                            <input class="inputForm" type="number" name="serialNumber" id="serialNumber" placeholder="Серия и номер">
+
+                            <!-- с телефона сканировать, с компа выбирать картинку -->
+                            <!-- или выбрать камеру -->
+                            <input class="inputForm" type="text" name="identificationСode" id="identificationСode" placeholder="Идентификационный код">
+                        </div>
                     </div>
-                    <div class="rightIdent__info">
-                        <input class="inputForm" type="text" name="key" id="key" placeholder="Код подразделения">
-                        <input class="inputForm" type="text" name="serialNumber" id="serialNumber" placeholder="Серия и номер">
-                        <input class="inputForm" type="text" name="identificationСode" id="identificationСode" placeholder="Идентификационный код">
+        
+                    <div class="information">
+                        <div class="rightIdent__info">
+                            <!-- все поля обязательные -->
+                            <input class="inputForm" type="text" name="lastName" id="lastName" placeholder="Фамилия">
+                            <input class="inputForm" type="text" name="firstName" id="firstName" placeholder="Имя">
+                            <input class="inputForm" type="text" name="patronymic" id="patronymic" placeholder="Отчество">
+
+                            <!-- тут сделать radio button с описанием для выбора пола -->
+                            <!-- по умолчанию мужской -->
+                            <input class="inputForm" type="text" name="sex" id="sex" placeholder="Пол: М/Ж">
+
+                            <!-- валидация длины, формата. Автоматически вставлять точку при вводе -->
+                            <input class="inputForm" type="number" name="bornDate" id="bornDate" placeholder="Дата рождения: 01.01.2000" min="8" max="8" required>
+
+                            <!-- ограничить на 200 символов -->
+                            <input class="inputForm" type="text" name="bornplace" id="bornplace" placeholder="Место рождения">
+                        </div>
                     </div>
                 </div>
-    
-                <div class="information">
-                    <div class="leftIdent__info">
-                        <input class="inputForm" type="text" name="lastName" id="lastName" placeholder="Фамилия">
-                        <input class="inputForm" type="text" name="firstName" id="firstName" placeholder="Имя">
-                        <input class="inputForm" type="text" name="patronymic" id="patronymic" placeholder="Отчество">
+                <div class="bottom__side">
+                    <div class="downloadFrom">
+                    <!-- скрывать стандартную форму и стилизовать новую с кнопкой внутри справа -->
+                        <input class="inputForm" type="file" src="" placeholder="подпись сотрудника">
+                        <input class="inputForm" type="file" src="" placeholder="личная подпись">
+                        <input class="inputForm" type="file" src="" placeholder="печать">
+                        <input class="inputForm" type="file" src="" placeholder="Фото">
                     </div>
-                    <div class="rightIdent__info">
-                        <input class="inputForm" type="text" name="sex" id="sex" placeholder="Пол">
-                        <input class="inputForm" type="text" name="bornDate" id="bornDate" placeholder="Дата рождения">
-                        <input class="inputForm" type="text" name="bornplace" id="bornplace" placeholder="Место рождения">
+                    <div class="buttonList">
+                        <!-- отдельно кнопки не нужны -->
+                        <input class="btn" type="submit" value="отправить">
+                        <input class="btn" type="submit" value="отправить">
+                        <input class="btn" type="submit" value="отправить">
+                        <input class="btn" type="submit" value="отправить">
                     </div>
                 </div>
-            </div>
-            <div class="bottom__side">
-                <div class="downloadFrom">
-                    <input class="inputForm" type="" src="" alt="подпись сотрудника">
-                    <input class="inputForm" type="" src="" alt="печать">
-                    <input class="inputForm" type="" src="" alt="личная подпись">
-                    <input class="inputForm" type="" src="" alt="Фото">
-                </div>
-                <div class="buttonList">
-                    <input class="btn" type="submit" value="отправить">
-                    <input class="btn" type="submit" value="отправить">
-                    <input class="btn" type="submit" value="отправить">
-                    <input class="btn" type="submit" value="отправить">
-                </div>
-                
-            </div>
+            </form>
         </div>
 
         <div class="right__container">
@@ -128,7 +147,7 @@
                         <h3 class="serial__title position">
                             <span id="title__value">серия и номер</span>
                         </h3>
-                        <div class="size serial__area">
+                        <div class="size bbg serial__area">
                             <span class="serial__value position"></span>
                         </div>
                     </div>
@@ -146,7 +165,7 @@
                         <h3 class="image__title position">
                             <span>фото</span>
                         </h3>
-                        <span class="image__id size"></span>
+                        <span class="bbg image__id size"></span>
                         <!-- <img src="#" alt="" class="image__id size"> -->
                     </div>
 
@@ -206,7 +225,7 @@
                             <h3 class="serial__title position size">
                                 <span id="title__value">серия и номер</span>
                             </h3>
-                            <div class="serial__area size">
+                            <div class="bbg serial__area size">
                                 <span class="serial__value position size"></span>
                             </div>
                         </div>
