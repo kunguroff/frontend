@@ -1,6 +1,6 @@
 body{
     background-color: rgb(226, 231, 236);
-    color: rgb(51, 51, 51);
+    color: rgb(40, 68, 94);
 }
 *{
     margin: 0;
@@ -40,13 +40,20 @@ span{
     justify-content: center;
     align-items: center;
 }
+
+/* START CONTAINER STYLE CODE */
 .left__container{
     width: 45vw;
     max-width: 1200px;
     height: 85vh;
 
-    background-color: rgb(188, 200, 212);
+    margin-right: 3vw;
+    padding: 5px;
 
+    background-color: rgb(243, 241, 241);
+    border: 2px solid rgb(207, 207, 207);
+
+    /* display: flex; */
 }
 .right__container {
     width: 45vw;
@@ -61,7 +68,110 @@ span{
     justify-content: space-between;
 
 }
+/* END CONTAINER STYLE CODE */
 
+
+
+/* START LEFT SIDE CODE */
+.top__side{
+    width: 100%;
+    height: 60%;
+
+    display: flex;
+    flex-flow: column;
+    /* align-items: end; */
+    /* justify-content: center; */
+
+    /* border: 2px solid black; */
+}
+.information{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    /* border: 2px solid black; */
+
+}
+.leftIdent__info{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+.rightIdent__info{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+
+    /* border: 2px solid black; */
+}
+.bottom__side{
+    width: 100%;
+    height: 40%;
+
+    display: flex;
+    /* flex-flow: column; */
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid black; */
+
+}
+.downloadFrom{
+    width: 70%;
+    height: 100%;
+
+    display: flex;
+    flex-flow: column;
+    align-items: start;
+    justify-content: center;
+
+    padding-left: 10px;
+}
+.buttonList{
+    width: 30%;
+    height: 100%;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+.inputForm{
+    width: 95%;
+    height: 40px;
+
+    /* border: none; */
+    border: 2px solid rgb(111, 3, 121);
+    /* border-radius: 5px; */
+    
+    margin-bottom: 10px;
+    padding: 3px 10px;
+}
+.information .inputForm{
+    border: 2px solid rgb(19, 123, 131);
+}
+.btn{
+    width: 70%;
+    height: 40px;
+
+    margin-bottom: 10px;
+    padding: 3px 10px;
+
+    background: rgb(103, 0, 112);
+    border: 2px solid rgba(111, 3, 121, 0.9);
+    color: rgb(255, 255, 255);
+}
+/* END LEFT SIDE CODE */
+
+
+
+/* START RIGHT SIDE CODE */
 /*  START TOP PAGE  */
 .top-page {
     width: 100%;
@@ -369,3 +479,4 @@ span{
     margin: 0 0 1% 0;
 }
 /*  END BOTTOM PAGE  */
+/* END RIGHT SIDE CODE */
