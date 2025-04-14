@@ -6,4 +6,4 @@
 
 >right side
 
-![](https://github.com/kunguroff/frontend/assets/imagesForReadme.md/rightSidePassport.png)
+![](/frontend/assets/imagesForReadme.md/rightSidePassport.png)
