@@ -46,7 +46,7 @@ span{
 .left__container{
     width: 45vw;
     max-width: 1200px;
-    height: 85vh;
+    height: 88vh;
 
     margin-right: 3vw;
     padding: 5px;
@@ -60,7 +60,7 @@ span{
 .right__container {
     width: 45vw;
     max-width: 1200px;
-    height: 85vh;
+    height: 88vh;
 
     display: flex;
     flex-flow: column;
@@ -73,6 +73,10 @@ span{
 
 
 /* START LEFT SIDE CODE */
+.dataForm{
+    width: 100%;
+    height: 100%;
+}
 .top__side{
     width: 100%;
     height: 60%;
@@ -177,7 +181,7 @@ span{
 /*  START TOP PAGE  */
 .top-page {
     width: 100%;
-    height: 49.5%;
+    height: 49%;
 
     background-color: rgb(243, 241, 241);
     border: 1px solid rgb(207, 207, 207);
@@ -187,6 +191,7 @@ span{
     justify-content: center;
     align-items: center;
 
+    padding: 3px;
 }
 .content-box {
     width: 90%;
@@ -208,7 +213,7 @@ span{
     justify-content: end;
 }
 .last_el {
-    margin-top: 10px;
+    margin: 30px 0 10px 0;
     height: 35%;
     justify-content: space-between;
 
@@ -249,7 +254,6 @@ span{
     display: flex;
     flex-flow: column;
     align-items: center;
-    /* background-color: blue; */
 }
 .personal__title{
     width: 70%;
@@ -257,11 +261,11 @@ span{
 
     height: 38%;
     text-align: center;
-    /* margin-bottom: 5px; */
+    margin-bottom: 5px;
 }
 .personal__area{
-    width: 90%;
-    height: 58%;
+    width: 85%;
+    height: 90%;
 
 }
 .personal__area_value{
@@ -291,7 +295,7 @@ span{
 
 .content__vertical_row{
     width: 80%;
-    height: 89%;
+    height: 94%;
 
     position: relative;
 }
@@ -319,7 +323,7 @@ span{
 /*  START BOTTOM PAGE  */
 .bottom-page {
     width: 100%;
-    height: 49.5%;
+    height: 49%;
 
     background-color: rgb(243, 241, 241);
     border: 1px solid rgb(207, 207, 207);
@@ -329,6 +333,8 @@ span{
     flex-flow: column;
     align-items: center;
     justify-content: end;
+
+    padding: 3px;
 }
 
 /* start  content  block  */
@@ -357,7 +363,17 @@ span{
     z-index: 3;
 }
 .image__id{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.image__squire{
+    width: 96%;
+    height: 85%;
+
     display: inline-block;
+    background-color: rgb(243, 241, 241);
+    border-radius: 50%;
 }
 /*  end  image  block  */
 
