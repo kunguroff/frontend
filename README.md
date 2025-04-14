@@ -4,4 +4,4 @@
 ### my first pet project PASSPORT
 >right side
 
-![image](https://disk.yandex.ru/i/OPac--znf_O4oQ)
+![](https://drive.google.com/file/d/14SdjpV5CkfJA0nxZm7gPqmrZCp8_ePgb/view?usp=sharing)
