@@ -6,4 +6,4 @@
 
 >right side
 
-![](imagesForReadme.md/Снимок экрана 2025-04-15 004644.png)
+![](https://github.com/kunguroff/frontend/assets/imagesForReadme.md/rightSidePassport.png)
