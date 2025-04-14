@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>Passport</title>
+</head>
+<body>
+    <div class="wrapper position">
+
+        <div class="left__container">
+            <form class="dataForm" action="" method="post">
+                <div class="top__side">
+                    <div class="information">
+                        <div class="leftIdent__info">
+                            <!-- вводить только капсом, форма ввода с выпадающим списком СНГ -->
+                            <input class="inputForm" type="text" name="country" id="country" placeholder="Страна">
+
+                            <!-- автоматически вводить капсом -->
+                            <input class="inputForm" type="text" name="organization" id="organization" placeholder="Кем выдан">
+
+                            <!-- числовое, валидация, автоматическая точка при вводе -->
+                            <input class="inputForm" type="number" name="date" id="date" placeholder="Дата выдачи">
+
+                            <!-- числовое, валидация, автоматический дефис при вводе -->
+                            <input class="inputForm" type="number" name="key" id="key" placeholder="Код подразделения">
+
+                            <!-- числовое, валидация, автоматический пробел при вводе -->
+                            <input class="inputForm" type="number" name="serialNumber" id="serialNumber" placeholder="Серия и номер">
+
+                            <!-- с телефона сканировать, с компа выбирать картинку -->
+                            <!-- или выбрать камеру -->
+                            <input class="inputForm" type="text" name="identificationСode" id="identificationСode" placeholder="Идентификационный код">
+                        </div>
+                    </div>
+        
+                    <div class="information">
+                        <div class="rightIdent__info">
+                            <!-- все поля обязательные -->
+                            <input class="inputForm" type="text" name="lastName" id="lastName" placeholder="Фамилия">
+                            <input class="inputForm" type="text" name="firstName" id="firstName" placeholder="Имя">
+                            <input class="inputForm" type="text" name="patronymic" id="patronymic" placeholder="Отчество">
+
+                            <!-- тут сделать radio button с описанием для выбора пола -->
+                            <!-- по умолчанию мужской -->
+                            <input class="inputForm" type="text" name="sex" id="sex" placeholder="Пол: М/Ж">
+
+                            <!-- валидация длины, формата. Автоматически вставлять точку при вводе -->
+                            <input class="inputForm" type="number" name="bornDate" id="bornDate" placeholder="Дата рождения: 01.01.2000" min="8" max="8" required>
+
+                            <!-- ограничить на 200 символов -->
+                            <input class="inputForm" type="text" name="bornplace" id="bornplace" placeholder="Место рождения">
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom__side">
+                    <div class="downloadFrom">
+                    <!-- скрывать стандартную форму и стилизовать новую с кнопкой внутри справа -->
+                        <input class="inputForm" type="file" src="" placeholder="подпись сотрудника">
+                        <input class="inputForm" type="file" src="" placeholder="личная подпись">
+                        <input class="inputForm" type="file" src="" placeholder="печать">
+                        <input class="inputForm" type="file" src="" placeholder="Фото">
+                    </div>
+                    <div class="buttonList">
+                        <!-- отдельно кнопки не нужны -->
+                        <input class="btn" type="submit" value="отправить">
+                        <input class="btn" type="submit" value="отправить">
+                        <input class="btn" type="submit" value="отправить">
+                        <input class="btn" type="submit" value="отправить">
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="right__container">
+
+            <!-- START TOP PAGE -->
+            <div class="top-page">
+                <div class="content-box">
+
+                    <div class="info-row">
+                        <h3 class="title">страна</h3>
+                        <div class="bbg country__area">
+                            <span class="size country__area_value" id="country__value"></span>
+                        </div>
+                    </div>
+
+                    <div class="info-row">
+                        <h3 class="title">кем</h3>
+                        <div class="bbg organization__area">
+                            <span class="size organization__area_value" id="organization__value"></span>
+                        </div>
+                    </div>
+
+
+                    <div class="info-row">
+                        <div class="date__box">
+                            <h3 class="title">
+                                <span id="date__title">дата выдачи: </span>
+                            </h3>
+                            <div class="bbg date__area">
+                                <span class="size area_value" id="date__value"></span>
+                            </div>
+                        </div>
+
+                        <div class="key__box">
+                            <h3 class="title">
+                                <span id="key__title">код</span>
+                            </h3>
+                            <div class="bbg key__area">
+                                <span class="key__area_value size" id="key__value"></span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Подписи и печать -->
+                    <div class="info-row last_el">
+                        <div class="personal__box">
+                            <h3 class="personal__title">подпись сотрудника</h3>
+                            <div class="bbg personal__area">
+                                <!-- <img class="size personal__area_value" src="/path/signature.jpg" alt="подпись сотрудника"> -->
+                                <span class="size personal__area_value"></span>
+                            </div>
+                        </div>
+                        <div class="personal__box">
+                            <h3 class="stamp__title position">печать</h3>
+                            <div class="position stamp__area">
+                                <!-- <img class="size stamp__area_value" src="/path/stamp.jpg" alt="печать"> -->
+                                <span class="stamp__area_value"></span>
+                            </div>
+                        </div>
+                        <div class="personal__box">
+                            <h3 class="personal__title">пичная подпись</h3>
+                            <div class="bbg personal__area">
+                                <!-- <img class="size personal__area_value" src="/path/signature.jpg" alt="личная подпись"> -->
+                                <span class="size personal__area_value"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ПРАВЫЙ БЛОК С СЕРИЕЙ И НОМЕРОМ -->
+                <div class="content-box right">
+                    <div class="content__vertical_row">
+                        <h3 class="serial__title position">
+                            <span id="title__value">серия и номер</span>
+                        </h3>
+                        <div class="size bbg serial__area">
+                            <span class="serial__value position"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END TOP PAGE -->
+
+
+            <!-- START BOTTOM PAGE -->
+            <div class="bottom-page">
+
+                <div class="content__row">
+
+                    <div class="image__box">
+                        <h3 class="image__title position">
+                            <span>фото</span>
+                        </h3>
+                        <div class="bbg image__id size">
+                            <span class="image__squire"></span>
+                        </div>
+                        <!-- <img src="#" alt="" class="image__id size"> -->
+                    </div>
+
+                    <div class="data__box">
+
+                        <!-- ЛИЧНЫЕ ДАННЫЕ -->
+                        <div class="nameplate__row">
+                            <div class="info-row">
+                                <h3 class="title">фамилия</h3>
+                                <div class="bbg organization__area">
+                                    <span class="size area_value" id></span>
+                                </div>
+                            </div>
+                            <div class="info-row">
+                                <h3 class="title">имя</h3>
+                                <div class="bbg organization__area">
+                                    <span class="size area_value"></span>
+                                </div>
+                            </div>
+                            <div class="info-row">
+                                <h3 class="title">отчество</h3>
+                                <div class="bbg organization__area">
+                                    <span class="size area_value"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ПОЛ И ДАТА РОЖДЕНИЯ -->
+                        <div class="details__row">
+                            <div class="sex__row">
+                                <h3 class="sex__title">пол: </h3>
+                                <div class="bbg sex__area">
+                                    <span class="size sex__area_value"></span>
+                                </div>
+                            </div>
+                            <div class="borndate__row">
+                                <h3 class="borndate__title">дата рождения: </h3>
+                                <div class="bbg borndate__area">
+                                    <span class="size borndate__area_value"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- МЕСТО РОЖДЕНИЯ -->
+                        <div class="bornplace__row">
+                            <h3 class="bornplace__title">место рождения: </h3>
+                            <div class="bbg bornplace__area">
+                                <p class="bornplace__area_value" id="bornplaceValue" name="bornplace" tabindex="15"></p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- СЕРИЯ И НОГМЕР -->
+                    <div class="serial__box">
+                        <div class="serial__vertical_row size">
+                            <h3 class="serial__title position size">
+                                <span id="title__value">серия и номер</span>
+                            </h3>
+                            <div class="bbg serial__area size">
+                                <span class="serial__value position size"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- ИДЕНТИФИКАТОР ПАСПОРТА -->
+                <div class="bbg code__row">
+
+                </div>
+            </div>
+            <!-- END BOTTOM PAGE -->
+
+        </div>
+    </div>
+</body>
+</html>
