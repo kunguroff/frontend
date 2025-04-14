@@ -6,4 +6,4 @@
 
 >right side
 
-![](Passport/assets/img/rightSidePassport.png)
+![](imagesForReadme.md/Снимок экрана 2025-04-15 004644.png)
