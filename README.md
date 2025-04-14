@@ -6,4 +6,4 @@
 
 >right side
 
-![](https://imgur.com/a/xqGzwmZ)
+![](Passport/assets/img/rightSidePassport.png)
