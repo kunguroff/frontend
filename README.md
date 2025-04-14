@@ -6,4 +6,4 @@
 
 >right side
 
-![](assets/imagesForReadme.md/rightSidePassport.png)
+![](Passport/assets/img/rightSidePassport.png)
