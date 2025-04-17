@@ -8,13 +8,14 @@
     <title>Passport</title>
 </head>
 <body>
-    <div class="wrapper position">
+    <div class="flexElement wrapper position">
 
         <div class="left__container">
-            <form class="dataForm" action="" method="post">
-                <div class="top__side">
-                    <div class="information">
-                        <div class="leftIdent__info">
+            <form class="dataForm flexElement" action="" method="post">
+                <fieldset class="ident__info">
+                    <legend class="formTitle"> Форма ввода данных </legend>
+                    <div class="top__side">
+                        <div class="flexElement information">
                             <!-- вводить только капсом, форма ввода с выпадающим списком СНГ -->
                             <input class="inputForm" type="text" name="country" id="country" placeholder="Страна">
 
@@ -34,10 +35,8 @@
                             <!-- или выбрать камеру -->
                             <input class="inputForm" type="text" name="identificationСode" id="identificationСode" placeholder="Идентификационный код">
                         </div>
-                    </div>
         
-                    <div class="information">
-                        <div class="rightIdent__info">
+                        <div class="flexElement information">
                             <!-- все поля обязательные -->
                             <input class="inputForm" type="text" name="lastName" id="lastName" placeholder="Фамилия">
                             <input class="inputForm" type="text" name="firstName" id="firstName" placeholder="Имя">
@@ -54,40 +53,33 @@
                             <input class="inputForm" type="text" name="bornplace" id="bornplace" placeholder="Место рождения">
                         </div>
                     </div>
-                </div>
-                <div class="bottom__side">
-                    <div class="downloadFrom">
-                    <!-- скрывать стандартную форму и стилизовать новую с кнопкой внутри справа -->
-                        <input class="inputForm" type="file" src="" placeholder="подпись сотрудника">
-                        <input class="inputForm" type="file" src="" placeholder="личная подпись">
-                        <input class="inputForm" type="file" src="" placeholder="печать">
-                        <input class="inputForm" type="file" src="" placeholder="Фото">
+                    <div class="bottom__side">
+                        <div class="downloadFrom">
+                        <!-- скрывать стандартную форму и стилизовать новую с кнопкой внутри справа -->
+                            <input class="btn" type="file" src="" placeholder="подпись сотрудника">
+                            <input class="btn" type="file" src="" placeholder="личная подпись">
+                            <input class="btn" type="file" src="" placeholder="печать">
+                            <input class="btn" type="file" src="" placeholder="Фото">
+                        </div>
                     </div>
-                    <div class="buttonList">
-                        <!-- отдельно кнопки не нужны -->
-                        <input class="btn" type="submit" value="отправить">
-                        <input class="btn" type="submit" value="отправить">
-                        <input class="btn" type="submit" value="отправить">
-                        <input class="btn" type="submit" value="отправить">
-                    </div>
-                </div>
+                </fieldset>
             </form>
         </div>
 
-        <div class="right__container">
+        <div class="flexElement right__container">
 
             <!-- START TOP PAGE -->
-            <div class="top-page">
-                <div class="content-box">
+            <div class="flexElement top-page">
+                <div class="flexElement content-box">
 
-                    <div class="info-row">
+                    <div class="flexElement info-row">
                         <h3 class="title">страна</h3>
                         <div class="bbg country__area">
                             <span class="size country__area_value" id="country__value"></span>
                         </div>
                     </div>
 
-                    <div class="info-row">
+                    <div class="flexElement info-row">
                         <h3 class="title">кем</h3>
                         <div class="bbg organization__area">
                             <span class="size organization__area_value" id="organization__value"></span>
@@ -95,8 +87,8 @@
                     </div>
 
 
-                    <div class="info-row">
-                        <div class="date__box">
+                    <div class="flexElement info-row">
+                        <div class="flexElement date__box">
                             <h3 class="title">
                                 <span id="date__title">дата выдачи: </span>
                             </h3>
@@ -105,7 +97,7 @@
                             </div>
                         </div>
 
-                        <div class="key__box">
+                        <div class="flexElement key__box">
                             <h3 class="title">
                                 <span id="key__title">код</span>
                             </h3>
@@ -117,7 +109,7 @@
 
 
                     <!-- Подписи и печать -->
-                    <div class="info-row last_el">
+                    <div class="flexElement info-row last_el">
                         <div class="personal__box">
                             <h3 class="personal__title">подпись сотрудника</h3>
                             <div class="bbg personal__area">
@@ -157,15 +149,15 @@
 
 
             <!-- START BOTTOM PAGE -->
-            <div class="bottom-page">
+            <div class="flexElement bottom-page">
 
-                <div class="content__row">
+                <div class="flexElement content__row">
 
-                    <div class="image__box">
+                    <div class="flexElement image__box">
                         <h3 class="image__title position">
                             <span>фото</span>
                         </h3>
-                        <div class="bbg image__id size">
+                        <div class="bbg flexElement size">
                             <span class="image__squire"></span>
                         </div>
                         <!-- <img src="#" alt="" class="image__id size"> -->
@@ -175,19 +167,19 @@
 
                         <!-- ЛИЧНЫЕ ДАННЫЕ -->
                         <div class="nameplate__row">
-                            <div class="info-row">
+                            <div class="flexElement info-row">
                                 <h3 class="title">фамилия</h3>
                                 <div class="bbg organization__area">
                                     <span class="size area_value" id></span>
                                 </div>
                             </div>
-                            <div class="info-row">
+                            <div class="flexElement info-row">
                                 <h3 class="title">имя</h3>
                                 <div class="bbg organization__area">
                                     <span class="size area_value"></span>
                                 </div>
                             </div>
-                            <div class="info-row">
+                            <div class="flexElement info-row">
                                 <h3 class="title">отчество</h3>
                                 <div class="bbg organization__area">
                                     <span class="size area_value"></span>
